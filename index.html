@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- IE required polyfills, in this exact order -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
+  <script src="https://npmcdn.com/angular2@2.0.0-beta.9/es6/dev/src/testing/shims_for_IE.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
+  <script src="https://code.angularjs.org/tools/system.js"></script>
+  <script src="https://npmcdn.com/typescript@1.8.2/lib/typescript.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
+  <script>
+    System.config({
+        transpiler: 'typescript',
+        typescriptOptions: { emitDecoratorMetadata: true },
+        packages: {'app': {defaultExtension: 'ts'}}
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+  </script>
+  <title>Angular 2 Application</title>
+
+</head>
+
+<body>
+
+<div class="container">
+  <my-app>Loading...</my-app>
+
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>
